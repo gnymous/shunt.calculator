@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/sweetalert2.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+	<body>
+
+		<div class="container">
+
+			<!-- Form Div Start-->
+			<div id="myForm" class="card">
+				<div class="card-header shunt-heading text-center ">
+					Shunt Calculator
+				</div>
+	
+				<div class="card-body form-body">
+					<form id="shuntForm" class="col-10 m-auto" >
+						<div class="col-12">
+							<div class="row">
+								<div class="col-4 col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Patient's name:</label>
+										<input type="text" name="" id="ptname" placeholder="Enter patient's Name" class="form-control" > 
+									</div>
+									<div class="form-group">
+										<label>Age:</label>
+										<input type="number" name="" id="age" placeholder="Enter patient's Age" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>Sex:</label>
+										<select name="" id="sex" class="form-control">
+											<option value="">Select Sex</option>
+											<option value="Male">Male</option>
+											<option value="Female">Female</option>
+										</select>	
+									</div>
+									<div class="form-group">
+										<label>Height:</label>
+										<input type="number" name="" id="height" placeholder="Height in cm" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>Weight:</label>
+										<input type="number" name="" id="weight" placeholder="Weight in kg" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>Hb%:</label>
+										<input type="number" step="any" name="" id="hb" placeholder="Enter Hb%" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>SPO2:</label>
+										<input type="number" name="" id="spo2" placeholder="Enter SPO2" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>RA Mean Pressuse:</label>
+										<input type="number" name="" id="ram" placeholder="Enter RA Mean Pressure" class="form-control"> 	
+									</div>
+								</div>
+	
+	
+	
+	
+								<div class="col-4 col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>LA Mean Pressuse:</label>
+										<input type="number" name="" id="lam" placeholder="Enter LA Mean Pressure" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>PA Mean Pressure:</label>
+										<input type="number" name="" id="pam" placeholder="Enter PA Mean Pressure" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>Aortic Mean Pressure:</label>
+										<input type="number" name="" id="aom" placeholder="Enter Aortic Mean Pressure" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>LV Mean Pressure:</label>
+										<input type="number" name="" id="lvm" placeholder="Enter LV Mean Pressure" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>Saturation SVC (H):</label>
+										<input type="number" name="" id="ssvch" placeholder="SVC (H) Saturation" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>Saturation SVC (L):</label>
+										<input type="number" name="" id="ssvcl" placeholder="SVC (L) Saturation" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>Saturation IVC (H):</label>
+										<input type="number" name="" id="sivch" placeholder="IVC (H) Saturation" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>Saturation IVC (L):</label>
+										<input type="number" name="" id="sivcl" placeholder="IVC (L) Saturation" class="form-control"> 	
+									</div>
+								</div>
+	
+	
+	
+	
+	
+								<div class="col-4 col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Saturation RA (H):</label>
+										<input type="number" name="" id="srah" placeholder="RA (H) Saturation" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>Saturation RA (M):</label>
+										<input type="number" name="" id="sram" placeholder="RA (M) Saturation" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>Saturation RA (L):</label>
+										<input type="number" name="" id="sral" placeholder="RA (L) Saturation" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>Saturation RV:</label>
+										<input type="number" name="" id="srv" placeholder="RV Saturation" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>Saturation PA:</label>
+										<input type="number" name="" id="spa" placeholder="PA Saturation" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>Saturation LV:</label>
+										<input type="number" name="" id="slv" placeholder="LV Saturation" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>Saturation LA:</label>
+										<input type="number" name="" id="sla" placeholder="LA Saturation" class="form-control"> 	
+									</div>
+									<div class="form-group">
+										<label>Saturation Aorta:</label>
+										<input type="number" name="" id="sao" placeholder="Aorta Saturation" class="form-control"> 	
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-12 text-center" >
+							<button id="submitBtn" type="submit" class="btn btn-primary custom-btn">Calculate</button>
+						</div>
+					</form>
+				</div>
+				<div class="card-footer"> 
+				</div>
+			</div>
+			<!-- /Form Div End-->
+
+
+			<!-- Result Div Start-->
+			<div id="myResult" class="card">
+				<div class="card-header result-heading text-center ">
+					Result
+				</div>
+	
+				<div class="card-body result-body">
+					<form class="col-10 m-auto">
+						<div class="col-12">
+							<div class="row">
+								<div class="col-6 col-md-6 col-sm-12">
+									<div class="form-group">
+										<label>BSA:</label>
+										<input type="text" name="" id="bsa"  disabled class="form-control result-box"> 
+									</div>
+									<div class="form-group">
+										<label>TVO2:</label>
+										<input type="text" name="" id="tvo2" disabled class="form-control result-box"> 	
+									</div>
+									<div class="form-group">
+										<label>SAO2:</label>
+										<input type="text" name="" id="sao2" disabled class="form-control result-box"> 	
+									</div>
+									<div class="form-group">
+										<label>PAO2:</label>
+										<input type="text" name="" id="pao2" disabled class="form-control result-box"> 	
+									</div>
+									<div class="form-group">
+										<label>MVO2:</label>
+										<input type="text" name="" id="mvo2" disabled class="form-control result-box"> 	
+									</div>
+	
+								</div>
+	
+	
+	
+	
+								<div class="col-6 col-md-6 col-sm-12">
+									<div class="form-group">
+										<label>QP:</label>
+										<input type="text" name="" id="qp" disabled class="form-control result-box"> 	
+									</div>
+									<div class="form-group">
+										<label>QS:</label>
+										<input type="text" name="" id="qs" disabled class="form-control result-box"> 	
+									</div>
+									<div class="form-group">
+										<label>QP/QS:</label>
+										<input type="text" name="" id="qpqs" disabled class="form-control result-box"> 	
+									</div>
+									<div class="form-group">
+										<label>PVR:</label>
+										<input type="text" name="" id="pvr" disabled class="form-control result-box"> 	
+									</div>
+									<div class="form-group">
+										<label>SVR:</label>
+										<input type="text" name="" id="svr" disabled class="form-control result-box"> 	
+									</div>
+									
+								</div>
+	
+	
+	
+	
+	
+								<div class="col-12 col-md-12 col-sm-12">
+									<div class="form-group">
+										<label>Left to Right Shunt:</label>
+										<input type="text" name="" id="lrshunt" disabled class="form-control result-box"> 	
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+	
+					</form>
+				</div>
+	
+				<div class="card-footer"> 
+	
+				</div>
+			</div>
+			<!-- /Result Div End-->
+
+		</div>
+
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/sweetalert2.all.min.js"></script>
+
+		<script>
+			$( document ).ready(function() {
+                $('#myResult').hide();
+                
+                $("#shuntForm").on("submit", function(e){
+                    e.preventDefault();
+
+					Swal.fire({
+						title: 'Are you sure?',
+						text: "You want to submit this form",
+						icon: 'warning',
+						showCancelButton: true,
+						confirmButtonColor: '#3085d6',
+						cancelButtonColor: '#d33',
+						confirmButtonText: 'Yes, Submit!',
+						reverseButtons: !0
+						}).then(function (e) {
+						if (e.value==true) {
+							let ptname 	= $('#ptname').val();
+							let age 	= $('#age').val();
+							let sex 	= $('#sex').val();
+							let height 	= Number($('#height').val());
+							let weight 	= Number($('#weight').val());
+							let hb 		= $('#hb').val();
+							let spo2 	= $('#spo2').val();
+							let ram 	= $('#ram').val();
+							let lam 	= $('#lam').val();
+							let pam 	= $('#pam').val();
+							let aom 	= $('#aom').val();
+							let lvm 	= $('#lvm').val();
+							let ssvch 	= Number($('#ssvch').val());
+							let ssvcl 	= Number($('#ssvcl').val());
+							let sivch 	= Number($('#sivch').val());
+							let sivcl 	= Number($('#sivcl').val());
+							let srah 	= $('#srah').val();
+							let sram 	= $('#sram').val();
+							let sral 	= $('#sral').val();
+							let srv 	= $('#srv').val();
+							let spa 	= $('#spa').val();
+							let slv 	= $('#slv').val();
+							let sla 	= $('#sla').val();
+							let sao 	= $('#sao').val();
+
+							if(height<40 || height>200){
+								Swal.fire({
+									title: 'Error!',
+									text: 'Check all the parameters you entered. ',
+									icon: 'error',
+									confirmButtonText: 'Try Again'
+								})
+
+								//alert('Please enter correct Height');
+								return false;
+							}
+
+							let bsa		= Math.sqrt(height*weight/3600);
+							let tvo2	= bsa*160;
+							let sao2 	= (hb*1.38*sla)/100;
+							let pao2    = (hb*1.38*spa)/100;
+							let mvo2	= (hb*1.38*((ssvch+ssvcl+sivch+sivcl)/4))/100;
+							let qp		= tvo2/((sao2-pao2)*10);
+							let qs		= tvo2/((sao2-mvo2)*10);
+							let qpqs	= qp/qs;
+							let pvr		= (pam-lam)/qp;
+							let svr		= (aom-ram)/qs;
+							let lrshunt	= ((qp-qs)*100)/qp;
+
+							$('#bsa').val(bsa.toFixed(2));
+							$('#tvo2').val(tvo2.toFixed(2));
+							$('#sao2').val(sao2.toFixed(2));
+							$('#pao2').val(pao2.toFixed(2));
+							$('#mvo2').val(mvo2.toFixed(2));
+							$('#qp').val(qp.toFixed(2));
+							$('#qs').val(qs.toFixed(2));
+							$('#qpqs').val(qpqs.toFixed(2));
+							$('#pvr').val(pvr.toFixed(2));
+							$('#svr').val(svr.toFixed(2));
+							$('#lrshunt').val(lrshunt.toFixed(2));
+
+							$('.result-heading').html("Result of: "+ptname);
+							$('#myForm').hide();
+							$('#myResult').show();
+
+						}else{
+							return false;
+						}
+					})
+
+				})
+			});
+
+		</script>
+	</body>
+</html>
